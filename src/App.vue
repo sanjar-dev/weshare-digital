@@ -23,8 +23,12 @@ import PromoTag from "./components/PromoTag.vue";
     <img class="banner" src="./assets/showcase.jpg" alt="" />
   </div>
 
-  <div class="container">
-    <PromoTag desc="Новые скидки каждый день!"></PromoTag>
+  <div class="container center promo-wrapper">
+    <div class="promos">
+      <PromoTag desc="Доставка во все регионы" icon="local_shipping"></PromoTag>
+      <PromoTag desc="Не упустите хорошие сделки!" icon="percent"></PromoTag>
+      <PromoTag desc="Высшее качество продуктов" icon="star_outline"></PromoTag>
+    </div>
   </div>
 
   <div class="container center">
@@ -50,6 +54,17 @@ import PromoTag from "./components/PromoTag.vue";
 .decor-line {
   width: 100%;
   height: 16px;
+  background-color: var(--cultured-2);
+}
+
+.promos {
+  display: flex;
+  width: 80%;
+  padding: 18px;
+  justify-content: space-between;
+}
+
+.promo-wrapper {
   background-color: var(--cultured-2);
 }
 </style>
@@ -159,7 +174,7 @@ body {
 
 .showcase .content button {
   padding: 16px 48px;
-  margin-top: auto;
+  margin-top: 18px;
   color: white;
   border: none;
   font-family: "Nunito";

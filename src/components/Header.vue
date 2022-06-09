@@ -11,7 +11,7 @@ import Cart from "./Cart.vue";
     </div>
     <div class="column row">
       <div class="icon-button">
-        <img src="../assets/icons/account-circle.svg" alt="Account" />
+        <img src="../assets/icons/account_circle.svg" alt="Account" />
       </div>
       <Cart></Cart>
     </div>
@@ -41,7 +41,7 @@ import Cart from "./Cart.vue";
 
 .icon-button img {
   width: 32px;
-  height: 32px;
+  height: 100%;
 }
 </style>
 
