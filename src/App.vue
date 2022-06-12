@@ -3,25 +3,85 @@ import Header from "./components/Header.vue";
 import Navbar from "./components/Navbar.vue";
 import News from "./components/News.vue";
 import PromoTag from "./components/PromoTag.vue";
+
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const modules = [Autoplay, Pagination, Navigation];
 </script>
 
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
-  <div class="decor-line"></div>
+  <div class="container">
+    <div class="decor-line"></div>
+  </div>
+
   <div class="container center">
     <Header></Header>
     <Navbar></Navbar>
   </div>
 
-  <div class="container showcase">
-    <div class="content">
-      <h1>Откройте для себя дизайн</h1>
-      <p>эстетичный дизайн для каждого</p>
-      <button>Магазин</button>
-    </div>
-    <img class="banner" src="./assets/showcase.jpg" alt="" />
+  <div class="container showcase-wrapper">
+    <swiper
+      :pagination="{
+        dynamicBullets: true,
+      }"
+      :modules="modules"
+      :loop="true"
+      :autoplay="{
+        delay: 3000,
+        disableOnInteraction: false,
+      }"
+    >
+      <swiper-slide class="showcase">
+        <div class="content">
+          <h1>Откройте для себя дизайн</h1>
+          <p>эстетичный дизайн для каждого</p>
+          <button>Магазин</button>
+        </div>
+        <img class="banner" src="./assets/showcase.jpg" alt="" />
+      </swiper-slide>
+      <swiper-slide class="showcase">
+        <div class="content">
+          <h1>Откройте для себя дизайн</h1>
+          <p>эстетичный дизайн для каждого</p>
+          <button>Магазин</button>
+        </div>
+        <img
+          class="banner"
+          src="./assets/virender-singh-hE0nmTffKtM-unsplash.jpg"
+          alt=""
+        />
+      </swiper-slide>
+    </swiper>
   </div>
+
+  <!-- <div class="container">
+    <swiper
+      :pagination="{
+        dynamicBullets: true,
+      }"
+      :modules="modules"
+      :loop="true"
+    >
+      <swiper-slide>
+        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
+      </swiper-slide>
+    </swiper>
+  </div> -->
 
   <div class="container center promo-wrapper">
     <div class="promos">
@@ -80,6 +140,14 @@ import PromoTag from "./components/PromoTag.vue";
   --davys-grey: #495057ff;
   --onyx: #343a40ff;
   --eerie-black: #212529ff;
+
+  --blue-jeans: #66a9e1ff;
+  --glaucous: #5c7bb5ff;
+  --maya-blue: #8ac5f4ff;
+  --baby-blue-eyes: #b1d5f8ff;
+  --african-violet: #b385b2ff;
+
+  --swiper-theme-color: var(--glaucous);
 }
 
 * {
@@ -147,7 +215,9 @@ body {
   width: 100%;
   height: 100%;
   padding: 100px 0;
-  margin: 41px auto;
+  /* margin-top: 42px; */
+  /* margin-bottom: 42px; */
+  /* margin: 42px auto; */
   overflow: hidden;
 }
 
@@ -183,6 +253,14 @@ body {
   text-transform: uppercase;
   background-color: var(--eerie-black);
   cursor: pointer;
+}
+
+.showcase-wrapper {
+  margin: 42px auto;
+}
+
+.showcase-wrapper .swiper-pagination {
+  margin-bottom: 24px;
 }
 
 .center {
