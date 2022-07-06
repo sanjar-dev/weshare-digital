@@ -64,14 +64,38 @@ import Cart from "./Cart.vue";
 
 .row .column {
   display: flex;
-  width: calc(100% / 3);
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.logo {
+.row .column.logo {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+/* .row .column.search {
+  width: 90%;
+} */
+
+/* .logo img {
+  width: 100%;
+  height: 100%;
+} */
+
+@media only screen and (max-width: 768px) {
+  .row .column.search {
+    display: none;
+  }
+  /* .row .column.logo {
+    justify-content: flex-start;
+  } */
+}
+
+@media only screen and (max-width: 468px) {
+  .line .cart {
+    display: none;
+  }
 }
 </style>

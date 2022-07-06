@@ -28,9 +28,16 @@ p {
   margin-bottom: 42px;
 }
 
+@media only screen and (max-width: 768px) {
+  .field {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+}
+
 .field {
-  width: 600px;
-  height: 80px;
+  width: 100%;
+  max-width: 600px;
   display: flex;
 }
 
@@ -48,7 +55,8 @@ input[type="text"]:focus {
 }
 
 button {
-  width: 75%;
+  width: 100%;
+  padding: 32px 24px;
   border: none;
   color: white;
   background-color: var(--eerie-black);

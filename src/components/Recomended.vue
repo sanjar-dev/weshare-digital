@@ -6,7 +6,7 @@ import Products from "./Products.vue";
   <div class="recomended center">
     <h1>Рекомендуемые товары</h1>
     <Suspense>
-      <Products columns="4" rows="2"></Products>
+      <Products></Products>
     </Suspense>
   </div>
 </template>
@@ -23,6 +23,7 @@ import Products from "./Products.vue";
   font-size: 24px;
   font-family: "Nunito";
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--eerie-black);

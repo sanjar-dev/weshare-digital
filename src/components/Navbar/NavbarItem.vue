@@ -6,6 +6,6 @@ defineProps({
 
 <template>
   <li>
-    {{ title }}
+    <slot></slot>
   </li>
 </template>

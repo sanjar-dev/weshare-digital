@@ -11,7 +11,7 @@
   min-width: 150px;
   padding: 12px;
   padding-left: 50px;
-  margin-right: auto;
+  /* margin-right: auto; */
   font-size: 20px;
   border: none;
   border-radius: 28px;

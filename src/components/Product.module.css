@@ -1,4 +1,5 @@
 .product {
+  margin: 0 auto;
   width: 180px;
   display: flex;
   flex-direction: column;

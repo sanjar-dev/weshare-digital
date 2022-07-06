@@ -76,7 +76,7 @@ const modules = [Autoplay, Pagination, Navigation];
     <Newsletter></Newsletter>
   </div>
 
-  <Footer />
+  <Footer></Footer>
 </template>
 
 <style scoped>
@@ -95,9 +95,10 @@ const modules = [Autoplay, Pagination, Navigation];
 }
 
 .promos {
-  display: flex;
   width: 80%;
   padding: 18px;
+  display: flex;
+  gap: 8px;
   justify-content: space-between;
 }
 
@@ -106,8 +107,21 @@ const modules = [Autoplay, Pagination, Navigation];
 }
 
 .newsletter {
-  height: 400px;
+  margin-top: 128px;
+  margin-bottom: 128px;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .promos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter {
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
 }
 </style>
 
@@ -163,6 +177,22 @@ const modules = [Autoplay, Pagination, Navigation];
   text-transform: uppercase;
   background-color: var(--eerie-black);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .showcase .content {
+    text-align: center;
+    align-items: center;
+  }
+  .showcase .content h1 {
+    font-size: 36px;
+  }
+  .showcase .content p {
+    font-size: 24px;
+  }
+  .showcase .content button {
+    font-size: 16px;
+  }
 }
 
 .showcase-wrapper {
