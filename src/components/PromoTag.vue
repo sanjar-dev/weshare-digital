@@ -11,7 +11,7 @@ defineProps({
       <!-- <img src="../assets/icons/shopping_cart.svg" alt="" /> -->
       <img :src="'/src/assets/icons/' + icon + '.svg'" alt="" />
     </div>
-    <p>{{ desc }}</p>
+    <p><slot></slot></p>
   </div>
 </template>
 

@@ -1,8 +1,9 @@
 <script setup>
 import Header from "./components/Header.vue";
 import Navbar from "./components/Navbar.vue";
-import News from "./components/News.vue";
 import PromoTag from "./components/PromoTag.vue";
+import Recomended from "./components/Recomended.vue";
+import Newsletter from "./components/Newsletter.vue";
 
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -47,8 +48,8 @@ const modules = [Autoplay, Pagination, Navigation];
       </swiper-slide>
       <swiper-slide class="showcase">
         <div class="content">
-          <h1>Откройте для себя дизайн</h1>
-          <p>эстетичный дизайн для каждого</p>
+          <h1>Комфортно и красиво</h1>
+          <p>удобные товары дополняющие интерьер</p>
           <button>Магазин</button>
         </div>
         <img
@@ -60,45 +61,20 @@ const modules = [Autoplay, Pagination, Navigation];
     </swiper>
   </div>
 
-  <!-- <div class="container">
-    <swiper
-      :pagination="{
-        dynamicBullets: true,
-      }"
-      :modules="modules"
-      :loop="true"
-    >
-      <swiper-slide>
-        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="./assets/showcase.jpg" alt="" style="width: 100%" />
-      </swiper-slide>
-    </swiper>
-  </div> -->
-
   <div class="container center promo-wrapper">
     <div class="promos">
-      <PromoTag desc="Доставка во все регионы" icon="local_shipping"></PromoTag>
-      <PromoTag desc="Не упустите хорошие сделки!" icon="percent"></PromoTag>
-      <PromoTag desc="Высшее качество продуктов" icon="star_outline"></PromoTag>
+      <PromoTag icon="local_shipping">Доставка во все регионы</PromoTag>
+      <PromoTag icon="percent">Не упустите хорошие сделки!</PromoTag>
+      <PromoTag icon="star_outline">Высшее качество продуктов</PromoTag>
     </div>
   </div>
 
   <div class="container center">
-    <h1>Новые товары</h1>
-    <Suspense>
-      <News></News>
-      <template #fallback>
-        <p class="center">Загрузка...</p>
-      </template>
-    </Suspense>
+    <Recomended></Recomended>
+  </div>
+
+  <div class="container center newsletter">
+    <Newsletter></Newsletter>
   </div>
 </template>
 
@@ -127,6 +103,11 @@ const modules = [Autoplay, Pagination, Navigation];
 .promo-wrapper {
   background-color: var(--cultured-2);
 }
+
+.newsletter {
+  height: 400px;
+  justify-content: center;
+}
 </style>
 
 <style>
@@ -151,7 +132,7 @@ const modules = [Autoplay, Pagination, Navigation];
 }
 
 * {
-  font-family: "Source Sans Pro";
+  font-family: "Nunito";
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -178,7 +159,7 @@ body {
   list-style: none;
   width: fit-content;
 }
-
+/* 
 .product {
   display: flex;
   flex-direction: column;
@@ -206,7 +187,7 @@ body {
   border: 1px solid black;
   padding: 20px;
   margin: 0 auto;
-}
+} */
 
 .showcase {
   display: flex;
@@ -215,9 +196,6 @@ body {
   width: 100%;
   height: 100%;
   padding: 100px 0;
-  /* margin-top: 42px; */
-  /* margin-bottom: 42px; */
-  /* margin: 42px auto; */
   overflow: hidden;
 }
 
