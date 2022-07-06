@@ -7,11 +7,11 @@ import Cart from "./Cart.vue";
   <div class="line row">
     <SearchBar class="column"></SearchBar>
     <div class="column logo">
-      <img src="../assets/WESHAREtitle.svg" alt="WeShare" />
+      <img src="../../assets/WESHAREtitle.svg" alt="WeShare" />
     </div>
     <div class="column row">
       <div class="icon-button">
-        <img src="../assets/icons/account_circle.svg" alt="Account" />
+        <img src="../../assets/icons/account_circle.svg" alt="Account" />
       </div>
       <Cart></Cart>
     </div>

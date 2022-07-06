@@ -1,0 +1,43 @@
+.product {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 250ms ease-out;
+}
+
+.product .thumbnail {
+  width: 100%;
+  height: 250px;
+  background-color: var(--cultured-2);
+}
+
+.product .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product .description {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.product .description b {
+  width: 100%;
+  font-family: "Nunito";
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--eerie-black);
+}
+
+.product .description p {
+  font-family: "Nunito";
+  font-size: 14px;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}

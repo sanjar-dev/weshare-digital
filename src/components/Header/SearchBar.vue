@@ -5,9 +5,8 @@
 </template>
 
 <style scoped>
-input[type="text"] {
+.search input[type="text"] {
   display: block;
-  /* height: 56px; */
   width: 80%;
   min-width: 150px;
   padding: 12px;
@@ -18,7 +17,7 @@ input[type="text"] {
   border-radius: 28px;
 
   background-color: var(--cultured-2);
-  background-image: url("../assets/icons/search.svg");
+  background-image: url("../../assets/icons/search.svg");
   background-position: 12px;
   background-size: 32px;
   background-repeat: no-repeat;

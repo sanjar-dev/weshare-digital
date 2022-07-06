@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* Palette */
+  --cultured: #f8f9faff;
+  --cultured-2: #e9ecefff;
+  --gainsboro: #dee2e6ff;
+  --light-gray: #ced4daff;
+  --cadet-blue-crayola: #adb5bdff;
+  --sonic-silver: #6c757dff;
+  --davys-grey: #495057ff;
+  --onyx: #343a40ff;
+  --eerie-black: #212529ff;
+
+  --blue-jeans: #66a9e1ff;
+  --glaucous: #5c7bb5ff;
+  --maya-blue: #8ac5f4ff;
+  --baby-blue-eyes: #b1d5f8ff;
+  --african-violet: #b385b2ff;
+
+  /* Swiper Customization */
+  --swiper-theme-color: var(--glaucous);
+}
+
+* {
+  font-family: "Nunito", "Segoe UI", "Arial", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

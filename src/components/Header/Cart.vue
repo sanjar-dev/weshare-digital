@@ -1,6 +1,6 @@
 <template>
   <div class="icon-button">
-    <img src="../assets/icons/shopping_cart.svg" alt="" />
+    <img src="../../assets/icons/shopping_cart.svg" alt="" />
     <p>2 предмет(а)</p>
   </div>
 </template>

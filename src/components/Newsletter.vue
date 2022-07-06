@@ -11,6 +11,7 @@
 
 <style scoped>
 h1 {
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 32px;
@@ -18,6 +19,7 @@ h1 {
 }
 
 p {
+  text-align: center;
   font-size: 20px;
   font-weight: 400;
 }
