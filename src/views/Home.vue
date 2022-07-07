@@ -1,10 +1,7 @@
 <script setup>
-import Header from "../components/Header/Header.vue";
-import Navbar from "../components/Navbar/Navbar.vue";
 import PromoTag from "../components/PromoTag.vue";
 import Recomended from "../components/Recomended.vue";
 import Newsletter from "../components/Newsletter.vue";
-import Footer from "../components/Footer.vue";
 
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";

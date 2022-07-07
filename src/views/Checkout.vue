@@ -11,6 +11,9 @@ const cart = useCartStore();
       Моя корзина <i>({{ cart.totalCost }}$)</i>
     </h1>
     <Products :products="cart.itemsArray" :clickable="false"></Products>
+    <button @click="cart.clearItems()" class="cart-clear">
+      Очистить корзину
+    </button>
   </div>
 </template>
 
@@ -39,5 +42,13 @@ const cart = useCartStore();
   font-style: normal;
   font-size: 16px;
   margin-left: 12px;
+}
+
+.cart-clear {
+  font-size: 18px;
+  margin: 24px 0;
+  padding: 12px 22px;
+  border: 1px solid black;
+  border-radius: 16px;
 }
 </style>
