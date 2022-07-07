@@ -16,14 +16,14 @@ const modules = [Autoplay, Pagination, Navigation];
 </script>
 
 <template>
-  <div class="container">
+  <!-- <div class="container">
     <div class="decor-line"></div>
   </div>
 
   <div class="container center">
     <Header></Header>
     <Navbar></Navbar>
-  </div>
+  </div> -->
 
   <div class="container showcase-wrapper">
     <swiper
@@ -69,14 +69,16 @@ const modules = [Autoplay, Pagination, Navigation];
   </div>
 
   <div class="container center">
-    <Recomended></Recomended>
+    <Suspense>
+      <Recomended></Recomended>
+    </Suspense>
   </div>
 
   <div class="container center newsletter">
     <Newsletter></Newsletter>
   </div>
 
-  <Footer></Footer>
+  <!-- <Footer></Footer> -->
 </template>
 
 <style scoped>
@@ -86,12 +88,6 @@ const modules = [Autoplay, Pagination, Navigation];
   object-fit: cover;
   position: absolute;
   z-index: -1;
-}
-
-.decor-line {
-  width: 100%;
-  height: 16px;
-  background-color: var(--cultured-2);
 }
 
 .promos {
@@ -179,6 +175,14 @@ const modules = [Autoplay, Pagination, Navigation];
   cursor: pointer;
 }
 
+.showcase-wrapper {
+  margin: 42px auto;
+}
+
+.showcase-wrapper .swiper-pagination {
+  margin-bottom: 24px;
+}
+
 @media only screen and (max-width: 768px) {
   .showcase .content {
     text-align: center;
@@ -193,13 +197,5 @@ const modules = [Autoplay, Pagination, Navigation];
   .showcase .content button {
     font-size: 16px;
   }
-}
-
-.showcase-wrapper {
-  margin: 42px auto;
-}
-
-.showcase-wrapper .swiper-pagination {
-  margin-bottom: 24px;
 }
 </style>

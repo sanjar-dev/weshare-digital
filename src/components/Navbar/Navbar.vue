@@ -12,10 +12,10 @@ defineProps({
 
 <template>
   <ul :class="[forFooter ? styles.recolored : '', styles.navbar]">
-    <NavbarItem>Главная</NavbarItem>
-    <NavbarItem>Магазин</NavbarItem>
-    <NavbarItem>О нас</NavbarItem>
-    <NavbarItem>Контакты</NavbarItem>
+    <NavbarItem link="/">Главная</NavbarItem>
+    <NavbarItem link="/wip">Магазин</NavbarItem>
+    <NavbarItem link="/wip">О нас</NavbarItem>
+    <NavbarItem link="/wip">Контакты</NavbarItem>
   </ul>
 </template>
 <!-- 

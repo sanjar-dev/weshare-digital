@@ -20,7 +20,12 @@
   cursor: pointer;
 }
 
-.navbar.recolored li {
+.navbar li a {
+  text-decoration: none;
+  color: var(--davys-grey);
+}
+
+.navbar.recolored li a {
   color: var(--cultured-2);
 }
 

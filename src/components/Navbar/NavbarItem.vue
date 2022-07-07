@@ -1,11 +1,18 @@
 <script setup>
+import { RouterLink } from "vue-router";
+
 defineProps({
-  title: String,
+  link: {
+    type: String,
+    default: "/",
+  },
 });
 </script>
 
 <template>
   <li>
-    <slot></slot>
+    <RouterLink :to="link">
+      <slot></slot>
+    </RouterLink>
   </li>
 </template>

@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^8.9.0",
     "ky": "^0.30.0",
     "pinia": "^2.0.14",
     "swiper": "^8.2.2",

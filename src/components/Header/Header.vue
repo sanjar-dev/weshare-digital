@@ -1,4 +1,6 @@
 <script setup>
+import { RouterLink } from "vue-router";
+
 import SearchBar from "./SearchBar.vue";
 import Cart from "./Cart.vue";
 </script>
@@ -7,10 +9,13 @@ import Cart from "./Cart.vue";
   <div class="line row">
     <SearchBar class="column"></SearchBar>
     <div class="column logo">
-      <img src="../../assets/WESHAREtitle.svg" alt="WeShare" />
+      <RouterLink to="/">
+        <img src="../../assets/WESHAREtitle.svg" alt="WeShare" />
+      </RouterLink>
     </div>
     <div class="column row">
       <div class="icon-button">
+        <RouterLink to="/wip"> </RouterLink>
         <img src="../../assets/icons/account_circle.svg" alt="Account" />
       </div>
       <Cart></Cart>
@@ -31,6 +36,11 @@ import Cart from "./Cart.vue";
   color: var(--sonic-silver);
   background-color: var(--cultured-2);
   cursor: pointer;
+}
+
+.icon-button a {
+  text-decoration: none;
+  color: var(--davys-grey);
 }
 
 .icon-button p {

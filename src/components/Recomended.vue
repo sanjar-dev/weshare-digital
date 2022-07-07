@@ -1,12 +1,17 @@
 <script setup>
+import ky from "ky";
 import Products from "./Products.vue";
+
+const data = await ky
+  .get("https://api.escuelajs.co/api/v1/products?offset=0&limit=8")
+  .json();
 </script>
 
 <template>
   <div class="recomended center">
     <h1>Рекомендуемые товары</h1>
     <Suspense>
-      <Products></Products>
+      <Products :products="data"></Products>
     </Suspense>
   </div>
 </template>

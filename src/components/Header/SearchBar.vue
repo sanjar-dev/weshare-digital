@@ -1,6 +1,14 @@
+<script setup>
+import router from "../../router";
+
+function gotoWIP() {
+  router.push("/wip");
+}
+</script>
+
 <template>
   <div class="search">
-    <input type="text" placeholder="Найти..." />
+    <input @keyup.enter="gotoWIP" type="text" placeholder="Найти..." />
   </div>
 </template>
 
@@ -11,7 +19,6 @@
   min-width: 150px;
   padding: 12px;
   padding-left: 50px;
-  /* margin-right: auto; */
   font-size: 20px;
   border: none;
   border-radius: 28px;
